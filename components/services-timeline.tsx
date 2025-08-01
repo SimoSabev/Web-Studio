@@ -5,12 +5,12 @@ import { CheckCircle, Lightbulb, Rocket, Users, Sparkles, Zap, ShieldCheck } fro
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' as const } },
 }
 
 const timelineItemVariants = {
   hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" as const } },
   hover: { scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)", transition: { duration: 0.3 } },
 }
 
