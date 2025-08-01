@@ -46,7 +46,7 @@ export default function HeroSection() {
   const title3 = "&"
   const title4 = "DESIGNER"
   const tagline =
-    "CLIENTS & INVESTORS 24/7. AWARD-WINNING WEBSITES THAT MAKE YOU STAND OUT AS A TECH-COMPANY AND STARTUP."
+    "Clients & Investors 24/7. Award-winning websites that make you stand out as a tech company and startup."
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -85,12 +85,11 @@ export default function HeroSection() {
             {title2}
           </motion.span>
           <motion.span
-            className="block animated-gradient-text text-7xl sm:text-8xl md:text-9xl lg:text-10xl xl:text-11xl"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, hsl(var(--dynamic-text-secondary)), hsl(var(--dynamic-text-primary)))",
-            }}
-            variants={wordVariants}
+              className="block text-5xl animated-gradient-text"
+              style={{
+                backgroundImage: "linear-gradient(to right, hsl(var(--dynamic-secondary)), hsl(var(--dynamic-accent)))",
+              }}
+              variants={wordVariants}
           >
             {title3}
           </motion.span>
@@ -105,7 +104,7 @@ export default function HeroSection() {
           </motion.span>
         </motion.h1>
         <motion.p
-          className="text-xl md:text-2xl lg:text-3xl text-dynamic-text-secondary max-w-4xl mx-auto leading-relaxed"
+          className="text-xl md:text-2xl lg:text-3xl text-dynamic-text-secondary max-w-4xl mx-auto mt-32 leading-relaxed"
           variants={taglineVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}

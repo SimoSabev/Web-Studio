@@ -25,7 +25,7 @@ export default function AboutUsSection() {
   return (
     <section
       id="about"
-      className="py-24 md:py-40 bg-background text-dynamic-text-primary relative overflow-hidden bg-floating-circles" // Changed to bg-dynamic-blobs
+      className="py-12 md:py-24 bg-background text-dynamic-text-primary relative overflow-hidden bg-floating-circles" // Changed to bg-dynamic-blobs
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24 z-10 relative">
         <h2
@@ -43,7 +43,7 @@ export default function AboutUsSection() {
             initial="hidden"
             animate={inView1 ? "visible" : "hidden"}
             variants={cardVariants}
-            className="flex flex-col lg:flex-row items-center lg:items-start gap-16 mb-24 p-6 sm:p-8 md:p-12 rounded-3xl bg-card shadow-2xl transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_20px_hsla(var(--dynamic-primary))]"
+            className="flex flex-col justify-center items-center gap-16 mb-24 p-6 sm:p-8 md:p-12 rounded-3xl bg-card shadow-2xl transform transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_20px_hsla(var(--dynamic-primary))]"
         >
           {/* Image Section */}
           <div
@@ -58,21 +58,13 @@ export default function AboutUsSection() {
                   height={320}
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 rounded-full"
               />
-              <motion.div
-                  className="absolute top-4 right-4 p-3 rounded-full shadow-md"
-                  style={{ backgroundImage: "linear-gradient(to right, hsl(var(--dynamic-secondary)), hsl(var(--dynamic-accent)))" }}
-                  whileHover={{ scale: 1.2, rotate: 360 }}
-                  transition={{ duration: 0.5 }}
-              >
-                <Code className="h-7 w-7 text-white" />
-              </motion.div>
             </div>
           </div>
 
           {/* Text Content Section */}
-          <div className="flex-1 text-center lg:text-left">
+          <div className="flex-1 text-center">
             {/* Badge */}
-            <div className="flex items-center justify-center lg:justify-start gap-4 mb-4 lg:mb-6">
+            <div className="flex items-center justify-center gap-4 mb-4 lg:mb-6">
               <motion.div variants={badgeHoverVariants} whileHover="hover">
                 <Badge
                     variant="secondary"
@@ -107,7 +99,7 @@ export default function AboutUsSection() {
             </p>
 
             {/* Skill Badges */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-5 sm:mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-5 sm:mb-8">
               <motion.div variants={badgeHoverVariants} whileHover="hover">
                 <Badge
                     variant="outline"
@@ -129,7 +121,7 @@ export default function AboutUsSection() {
             </div>
 
             {/* Contact Links */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <motion.a
                   href="tel:+359885031865"
                   className="flex items-center gap-2 text-xs sm:text-sm md:text-base text-dynamic-text-secondary hover:text-dynamic-primary transition-colors duration-300"
@@ -157,7 +149,7 @@ export default function AboutUsSection() {
             initial="hidden"
             animate={inView2 ? "visible" : "hidden"}
             variants={cardVariants}
-            className="flex flex-col lg:flex-row items-center lg:items-start gap-6 sm:gap-8 md:gap-12 lg:gap-16 mb-10 sm:mb-16 md:mb-24 lg:mb-32 p-4 sm:p-8 md:p-12 lg:p-16 rounded-3xl bg-card shadow-2xl transform transition-transform duration-500 hover:scale-[1.02] hover:shadow-[0_0_20px_hsla(var(--dynamic-primary))]"
+            className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 mb-10 sm:mb-16 md:mb-24 lg:mb-32 p-4 sm:p-8 md:p-12 lg:p-16 rounded-3xl bg-card shadow-2xl transform transition-transform duration-500 hover:scale-[1.02] hover:shadow-[0_0_20px_hsla(var(--dynamic-primary))]"
         >
           {/* Image Section */}
           <div
@@ -171,20 +163,12 @@ export default function AboutUsSection() {
                 height={320}
                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
             />
-            <motion.div
-                className="absolute top-2 sm:top-4 md:top-6 left-2 sm:left-4 md:left-6 p-2 sm:p-3 md:p-4 rounded-full shadow-lg"
-                style={{ backgroundColor: "hsl(var(--dynamic-primary))" }}
-                whileHover={{ scale: 1.2, rotate: -360 }}
-                transition={{ duration: 0.5 }}
-            >
-              <Palette className="h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6 text-white" />
-            </motion.div>
           </div>
 
           {/* Content Section */}
-          <div className="flex-1 text-center lg:text-right">
+          <div className="flex-1 text-center">
             {/* Badge Section */}
-            <div className="flex items-center justify-center lg:justify-end gap-2 sm:gap-4 md:gap-6 mb-4 sm:mb-6">
+            <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-6 mb-4 sm:mb-6">
               <motion.div variants={badgeHoverVariants} whileHover="hover">
                 <Badge
                     variant="secondary"
@@ -219,7 +203,7 @@ export default function AboutUsSection() {
             </p>
 
             {/* Skills Section */}
-            <div className="flex flex-wrap justify-center lg:justify-end gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-6 md:mb-8">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-6 md:mb-8">
               <motion.div variants={badgeHoverVariants} whileHover="hover">
                 <Badge
                     variant="outline"
@@ -241,9 +225,9 @@ export default function AboutUsSection() {
             </div>
 
             {/* Contact Links */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-end gap-3 sm:gap-4 md:gap-6">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 md:gap-6">
               <motion.a
-                  href="tel:+359885031865"
+                  href="tel:+359988231539"
                   className="flex items-center gap-2 sm:gap-3 md:gap-4 text-xs sm:text-sm md:text-base text-dynamic-text-secondary hover:text-dynamic-primary transition-colors duration-300"
                   variants={linkHoverVariants}
                   whileHover="hover"
@@ -251,12 +235,12 @@ export default function AboutUsSection() {
                 <Phone className="h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6" /> +359 98 823 1539
               </motion.a>
               <motion.a
-                  href="mailto:alex.johnson@example.com"
+                  href="mailto:maxym.akimov@gmail.com"
                   className="flex items-center gap-2 sm:gap-3 md:gap-4 text-xs sm:text-sm md:text-base text-dynamic-text-secondary hover:text-dynamic-primary transition-colors duration-300"
                   variants={linkHoverVariants}
                   whileHover="hover"
               >
-                <Mail className="h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6" /> alex.johnson@example.com
+                <Mail className="h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6" /> maxym.akimov@gmail.com
               </motion.a>
             </div>
           </div>
